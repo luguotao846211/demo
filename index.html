@@ -12,7 +12,7 @@
     <meta property="og:description" content="我是描述4">
     <meta itemprop="image" content="http://www.hualala.com/static/imgs/haikou.png">
     <meta property="og:image" content="http://www.hualala.com/static/imgs/haikou.png">
-    <title>Document666</title>
+<!--     <title>Document666</title> -->
     <meta name="title" content="分享的标题">
     <script type="text/javascript" src="//open.mobile.qq.com/sdk/qqapi.js"></script>
 
@@ -23,8 +23,16 @@
         <div class="line" id="lll">-55title5-</div>
     </div>
 </body>
+    
+        <script>
+            var headDom = document.getElementsByTagName('head');
+            var titleMetaDom =  document.createElement('title');
+            titleMetaDom.innerHTML="分享的标题title"
+            headDom[0].appendChild(titleMetaDom)
+         </script>
 
 <script>
+        console.log(mqq)
         mqq.data.setShareInfo({
             share_url: encodeURI(window.location.href),
             title: '分享的标题zidingyi',
